@@ -12,7 +12,7 @@ Also, please only install this mod on an untranslated copy of the game, as the p
 
 1. Download and run the latest installer from [Releases](https://github.com/mikaeltarquin/Densha-de-Go-AC-2017-English-Translation/releases).
 
-2. At the Select Destination Location screen, choose the location of your Densha de Go!! game directory (the folder that contains the DGOREPR, Engine, and TG4AC folders, among and other files). For example, if your game directory looks like <code>C:\Games\Densha5.80.02\TG4AC\Binaries\...</code>, then you should enter <code>C:\Games\Densha5.80.02</code> in this field. The installer will automatically enter the folder name "Densha5.80.02", so take care when editing this field.
+2. At the Select Destination Location screen, choose the location of your Densha de Go!! game directory (the folder that contains the DGOREPR, Engine, and TG4AC folders, among other files). For example, if your game directory looks like <code>C:\Games\Densha5.80.02\TG4AC\Binaries\...</code>, then you should enter <code>C:\Games\Densha5.80.02</code> in this field. The installer will automatically enter the folder name "Densha5.80.02", so take care when editing this field. The easiest way to make sure this works is to name your game folder "Densha5.80.02", then select the next higher directory to let the installer auto fill the game folder. 
 
 3. Press Next, then Yes to confirm you would like to install in the existing game folder. At the final screen, verify the destination location is correct (I'll repeat it, this should be the directory that is just above the DGOREP, Engine, and TG4AC folders). Press Install to apply the translation mod to your game.
 
@@ -21,6 +21,7 @@ Also, please only install this mod on an untranslated copy of the game, as the p
 ## Uninstallation and Update Instructions
 After clicking Finish, there will be a few leftover items in your main game folder:
 - _translation_backup_<version number>
+- English_Mod_README.md
 - English_Mod_Tool_-_DO_NOT_DELETE.exe
 - unins000.dat and unins000.exe
 
