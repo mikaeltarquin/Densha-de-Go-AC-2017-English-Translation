@@ -42,6 +42,7 @@ No copyright materials, assets, or game data are included in this mod. This mod 
 ## Credits
 Michael Anderson (MikaelTarquin), Dan "Alpha", Sponge, Entaroadun, Funkyspectrum. 
 
+## Sample Images
 ![image](readme_assets/Sample1.png)
 ![image](readme_assets/Sample2.png)
 ![image](readme_assets/Sample3.jpg)
