@@ -1,6 +1,6 @@
 # Densha-de-Go-AC-2017-English-Translation
 Fan Translation for Densha de Go!! 2017 Arcade Version (TG4AC) 
-![image](readme_assets/Sample0.jpg)
+![image](readme_assets/ddg_english_translation_mod_logo.png)
 
 Thank you for downloading our English translation of Densha de Go!!
 
