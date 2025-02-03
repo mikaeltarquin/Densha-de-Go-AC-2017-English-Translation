@@ -30,7 +30,7 @@ After clicking Finish, there will be a few leftover items in your main game fold
 
 If you would like to revert your game to Japanese, double-click on "unins000.exe", or open Apps & Features in your Windows Settings menu and use the "Remove Densha de Go!! AC 2017 English Translation" option. This will restore the original files and remove the backup, English Mod Tool, and uninstaller from your main game folder.
 
-If you are updating to a new Release, please RUN THE UNINSTALLER BEFORE UPDATING to return your game to Japanese. 
+If you are updating to a new Release, please RUN THE UNINSTALLER BEFORE UPDATING to return your game to Japanese.
 ![image](readme_assets/description_of_files.png)
 
 ## Project Page
