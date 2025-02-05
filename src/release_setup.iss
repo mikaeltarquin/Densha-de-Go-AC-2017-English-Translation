@@ -6,11 +6,9 @@
 #define MyAppName "Densha de Go!! AC 2017 English Translation"
 #define MyAppVersion "5.80.02-en" + CurrentDate
 #define MyAppPublisher "MikaelTarquin"
-#define MyAppExeName "DDG_5.80.02-en" + CurrentDate + ".exe"
-
 
 [Setup]
-AppId={{1E6829E3-EDD2-40FC-972D-5EA3E8C51C50}
+AppId={{1E6829E3-EDD2-40FC-972D-5EA3E8C51C50}}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 DefaultDirName=C:\Densha5.80.02
@@ -27,10 +25,10 @@ Source: "D:\DenshaProject\__installer\English_Mod_README.MD"; DestDir: "{app}"
 Source: "D:\DenshaProject\__installer\patches\*"; DestDir: "{app}\patches"; Flags: recursesubdirs createallsubdirs deleteafterinstall
 
 [Run]
-Filename: "{app}\English_Mod_Tool_-_DO_NOT_DELETE.exe"; Parameters: "install {app} {app}\patches"; StatusMsg: "Installing..."; Flags: waituntilterminated
+Filename: "{app}\English_Mod_Tool_-_DO_NOT_DELETE.exe"; Parameters: "install ""{app}"" ""{app}\patches"""; StatusMsg: "Installing..."; Flags: waituntilterminated
 
 [UninstallRun]
-Filename: "{app}\English_Mod_Tool_-_DO_NOT_DELETE.exe"; Parameters: "restore {app} {app}\patches"; StatusMsg: "Restoring..."; Flags: waituntilterminated
+Filename: "{app}\English_Mod_Tool_-_DO_NOT_DELETE.exe"; Parameters: "restore ""{app}"" ""{app}\patches"""; StatusMsg: "Restoring..."; Flags: waituntilterminated
 
 [UninstallDelete]
 Type: files; Name: "{app}\English_Mod_Tool_-_DO_NOT_DELETE.exe"
