@@ -14,10 +14,12 @@ BASE_UTILITY_FILE = "LaunchProductionUtilityData.uasset"
 
 # Special handling for music file variants
 MUSIC_VARIANTS = {
-    "default": BASE_MUSIC_FILE,
-    "new_ike_kan": BASE_MUSIC_FILE + ".bak.new_ike_kan",
-    "new_tky_sjk": BASE_MUSIC_FILE + ".bak.new_tky_sjk",
-    "old_all": BASE_MUSIC_FILE + ".bak.old_all"
+    "default_2ch": BASE_MUSIC_FILE + ".default.2ch",
+    "modern_2ch": BASE_MUSIC_FILE + ".modern.2ch",
+    "classic_2ch": BASE_MUSIC_FILE + ".classic.2ch",
+    "default_6ch": BASE_MUSIC_FILE + ".default.6ch",
+    "modern_6ch": BASE_MUSIC_FILE + ".modern.6ch",
+    "classic_6ch": BASE_MUSIC_FILE + ".classic.6ch"
 }
 
 # Directories to search for other files
@@ -65,10 +67,10 @@ def create_patches():
         mod_file_path = os.path.join(modified_music_dir, variant_file)
         if os.path.exists(mod_file_path):
             # Determine patch name
-            if variant_name == "default":
-                patch_name = f"{BASE_MUSIC_FILE}.xdelta"
-            else:
-                patch_name = f"{BASE_MUSIC_FILE}.{variant_name}.xdelta"
+            # if variant_name == "default":
+            #     patch_name = f"{BASE_MUSIC_FILE}.xdelta"
+            # else:
+            patch_name = f"{BASE_MUSIC_FILE}.{variant_name}.xdelta"
             
             patch_path = os.path.join(music_patch_dir, patch_name)
             print(f"\nCreating patch for {variant_name}...")

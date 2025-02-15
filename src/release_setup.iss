@@ -44,23 +44,39 @@ Source: "D:\DenshaProject\__installer\switch_station_melodies.bat"; DestDir: "{a
 
 [Code]
 var
+  SpeakerPage: TWizardPage;
   MusicPage: TWizardPage;
+  SpeakerButtons: array[1..2] of TRadioButton;
   MusicButtons: array[1..4] of TRadioButton;
-  MusicChoice: string;
+  SpeakerDesc: TNewStaticText;
 
-// Function declaration must come before it's used
-function GetMusicChoice(Param: string): string;
+// Update function to get both choices
+function GetChoices(Param: string): string;
 var
   i: Integer;
+  speakerChoice, musicChoice: string;
 begin
+  // Get speaker choice
+  for i := 1 to 2 do
+  begin
+    if SpeakerButtons[i].Checked then
+    begin
+      speakerChoice := IntToStr(i);
+      break;
+    end;
+  end;
+  
+  // Get music choice
   for i := 1 to 4 do
   begin
     if MusicButtons[i].Checked then
     begin
-      Result := IntToStr(i);
+      musicChoice := IntToStr(i);
       break;
     end;
   end;
+  
+  Result := speakerChoice + ' ' + musicChoice;
 end;
 
 procedure InitializeWizard;
@@ -68,8 +84,38 @@ begin
   WizardForm.DirEdit.Text := '';
   WizardForm.DirBrowseButton.Visible := True;
 
+  // Create speaker selection page
+  SpeakerPage := CreateCustomPage(wpSelectDir, 'Speaker Configuration', 
+    'Choose your speaker configuration.');
+
+  // Create radio buttons for speaker options
+  SpeakerButtons[1] := TRadioButton.Create(SpeakerPage);
+  SpeakerButtons[1].Parent := SpeakerPage.Surface;
+  SpeakerButtons[1].Caption := 'Stereo (Recommended for most setups)';
+  SpeakerButtons[1].Left := 0;
+  SpeakerButtons[1].Top := 0;
+  SpeakerButtons[1].Width := SpeakerPage.SurfaceWidth;
+  SpeakerButtons[1].Checked := True;
+
+  SpeakerButtons[2] := TRadioButton.Create(SpeakerPage);
+  SpeakerButtons[2].Parent := SpeakerPage.Surface;
+  SpeakerButtons[2].Caption := 'Surround Sound (Experimental, for DX cabs)';
+  SpeakerButtons[2].Left := 0;
+  SpeakerButtons[2].Top := 20;
+  SpeakerButtons[2].Width := SpeakerPage.SurfaceWidth;
+
+  // Add description label for speaker options
+  SpeakerDesc := TNewStaticText.Create(SpeakerPage);
+  SpeakerDesc.Parent := SpeakerPage.Surface;
+  SpeakerDesc.Caption := 'Note: Surround Sound option is only intended for DX cabinet setups with proper 6-channel audio support. Most users should select Stereo.';
+  SpeakerDesc.Left := 0;
+  SpeakerDesc.Top := 50;
+  SpeakerDesc.Width := SpeakerPage.SurfaceWidth;
+  SpeakerDesc.WordWrap := True;
+
   // Create music selection page
-  MusicPage := CreateCustomPage(wpSelectDir, 'Station Melody Selection', 'Choose which station melodies you would like to use.');
+  MusicPage := CreateCustomPage(SpeakerPage.ID, 'Station Melody Selection', 
+    'Choose which station melodies you would like to use.');
 
   // Create radio buttons for music options
   MusicButtons[1] := TRadioButton.Create(MusicPage);
@@ -131,10 +177,10 @@ WizardSelectDir=Select Game Location
 SelectDirBrowseLabel=To continue, click Next, and press YES when warned that the folder already exists. If you would like to select a different folder, click Browse.
 
 [Run]
-Filename: "{app}\English_Mod_Tool_-_DO_NOT_DELETE.exe"; Parameters: "install ""{app}"" ""{app}\patches"" {code:GetMusicChoice}"; StatusMsg: "Installing English Translation..."; Flags: waituntilterminated
+Filename: "{app}\English_Mod_Tool_-_DO_NOT_DELETE.exe"; Parameters: "install ""{app}"" ""{app}\patches"" {code:GetChoices}"; StatusMsg: "Installing English Translation..."; Flags: waituntilterminated
 
 [UninstallRun]
-Filename: "{app}\English_Mod_Tool_-_DO_NOT_DELETE.exe"; Parameters: "restore ""{app}"" ""{app}\patches"""; StatusMsg: "Restoring Original Files..."; Flags: waituntilterminated
+Filename: "{app}\English_Mod_Tool_-_DO_NOT_DELETE.exe"; Parameters: "restore ""{app}"" ""{app}\patches"""; StatusMsg: "Restoring Original Files..."; Flags: waituntilterminated; RunOnceId: "RestoreOriginal"
 
 [UninstallDelete]
 Type: files; Name: "{app}\English_Mod_Tool_-_DO_NOT_DELETE.exe"
