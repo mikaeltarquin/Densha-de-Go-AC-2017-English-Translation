@@ -13,24 +13,33 @@ Also, please only install this mod on an untranslated copy of the game, as the p
 
 1. Download and run the latest installer from [Releases](https://github.com/mikaeltarquin/Densha-de-Go-AC-2017-English-Translation/releases).
 
-2. At the Select Destination Location screen, choose the location of your Densha de Go!! game directory (the folder that contains the DGOREPR, Engine, and TG4AC folders, among other files). For example, if your game directory looks like <code>C:\Games\Densha5.80.02\TG4AC\Binaries\...</code>, then you should enter <code>C:\Games\Densha5.80.02</code> in this field. The installer will automatically enter the folder name "Densha5.80.02", so take care when editing this field. The easiest way to make sure this works is to name your game folder "Densha5.80.02", then select the next higher directory to let the installer auto fill the game folder. NOTE: The installer does not currently work if your game directory name contains spaces (e.g., "C:\Densha de Go\\" will not work, but "C:\DenshaDeGo\\" will). Until this is resolved, please remove any spaces in your folder name.
+2. At the Select Destination Location screen, choose the location of your Densha de Go!! game directory (the folder that contains the DGOREPR, Engine, and TG4AC folders, among other files). For example, if your game directory looks like <code>C:\Games\Densha5.80.02\TG4AC\Binaries\...</code>, then you should enter <code>C:\Games\Densha5.80.02</code> in this field. The installer will automatically enter the folder name "New Folder" if you use the Browse button, so take care when editing this field. Press Next, then Yes to confirm you would like to install in the existing game folder. 
+   
 ![image](readme_assets/installer_directory.png)
 
-3. Press Next, then Yes to confirm you would like to install in the existing game folder. At the final screen, verify the destination location is correct (I'll repeat it, this should be the directory that is just above the DGOREP, Engine, and TG4AC folders). Press Install to apply the translation mod to your game.
+3. On the next screen, choose a set of Station Melodies. These can be changed later using the included `switch_station_melody.bat`.
+   
+4. At the final screen, verify the destination location is correct (I'll repeat it, this should be the directory that is just above the DGOREP, Engine, and TG4AC folders). Press Install to apply the translation mod to your game.
+   
 ![image](readme_assets/install_script_running.png)
 
-4. ~~出発進行~~ _Proceed with departure!!_
+5. ~~出発進行~~ _Proceed with departure!!_
 
 ## Uninstallation and Update Instructions
 After clicking Finish, there will be a few leftover items in your main game folder:
-- _translation_backup_<version number>
+- /_translation_backup_<version number>/
+- /patches/music/
 - English_Mod_README.md
 - English_Mod_Tool_-_DO_NOT_DELETE.exe
+- switch_station_melodies.bat
 - unins000.dat and unins000.exe
+
+If you would like to change your selection of station melodies, run `switch_station_melody.bat` and follow the on-screen prompts.
 
 If you would like to revert your game to Japanese, double-click on "unins000.exe", or open Apps & Features in your Windows Settings menu and use the "Remove Densha de Go!! AC 2017 English Translation" option. This will restore the original files and remove the backup, English Mod Tool, and uninstaller from your main game folder.
 
-If you are updating to a new Release, please RUN THE UNINSTALLER BEFORE UPDATING to return your game to Japanese.
+If you are updating to a new Release, please RUN THE UNINSTALLER BEFORE RUNNING THE NEW INSTALLER. This will return your game to Japanese and remove all previously installed mod files, ensuring compatibility.
+
 ![image](readme_assets/description_of_files.png)
 
 ## Project Page
