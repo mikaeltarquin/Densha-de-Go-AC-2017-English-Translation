@@ -18,6 +18,8 @@ Also, please only install this mod on an untranslated copy of the game, as the p
 ![image](readme_assets/installer_directory.png)
 
 3. On the next screen, choose a set of Station Melodies. These can be changed later using the included `switch_station_melody.bat`.
+
+![image](readme_assets/station_melody_selection.png)
    
 4. At the final screen, verify the destination location is correct (I'll repeat it, this should be the directory that is just above the DGOREP, Engine, and TG4AC folders). Press Install to apply the translation mod to your game.
    
