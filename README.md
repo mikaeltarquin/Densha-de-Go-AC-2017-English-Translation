@@ -17,15 +17,19 @@ Also, please only install this mod on an untranslated copy of the game, as the p
    
 ![image](readme_assets/installer_directory.png)
 
-3. On the next screen, choose a set of Station Melodies. These can be changed later using the included `switch_station_melody.bat`.
+3. On the next screen, choose a Speaker Configuration. Stereo is recommended for most users. Surround is intended for DX arcade cabinets, may or may not work with other setups. If you don't hear melodies, use the `switch_station_melody.bat` to change to a stereo option.
+
+![image](readme_assets/speaker_configuration.png)
+
+4. On the next screen, choose a set of Station Melodies. These can be changed later using the included `switch_station_melody.bat`.
 
 ![image](readme_assets/station_melody_selection.png)
    
-4. At the final screen, verify the destination location is correct (I'll repeat it, this should be the directory that is just above the DGOREP, Engine, and TG4AC folders). Press Install to apply the translation mod to your game.
+5. At the final screen, verify the destination location is correct (I'll repeat it, this should be the directory that is just above the DGOREP, Engine, and TG4AC folders). Press Install to apply the translation mod to your game.
    
 ![image](readme_assets/install_script_running.png)
 
-5. ~~出発進行~~ _Proceed with departure!!_
+6. ~~出発進行~~ _Proceed with departure!!_
 
 ## Uninstallation and Update Instructions
 After clicking Finish, there will be a few leftover items in your main game folder:
